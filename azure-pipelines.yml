@@ -1,0 +1,43 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - master
+    - develop
+
+pr:
+  branches:
+    include:
+    - master
+    - develop
+
+stages:
+- stage: 'Build'
+  jobs:
+  - job: 'Windows_job'
+    timeoutInMinutes: 10
+    pool:
+      vmImage: 'windows-latest'
+
+    variables:
+      solution: '**/*.sln'
+      buildPlatform: 'Any CPU'
+      buildConfiguration: 'Release'
+
+    steps:
+    - checkout: self
+      lfs: true
+      submodules: true
+
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'restore'
+        projects: '$(solution)'
+      displayName: "Restore .sln"
+
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'build'
+        projects: '$(solution)'
+        arguments: '--configuration $(buildConfiguration) --no-restore'
+      displayName: "Build .sln"

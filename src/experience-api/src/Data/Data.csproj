@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Doctrina.ExperienceApi.Data</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright 2019</Copyright>
+    <Company>Bitflipping</Company>
+    <Authors>Bitflipping</Authors>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/bitflipping-solutions/experience-api</RepositoryUrl>
+    <LangVersion>7.1</LangVersion>
+    <AssemblyName>Doctrina.ExperienceApi.Data</AssemblyName>
+    <Version>0.0.2-alpha</Version>
+    <PackageProjectUrl>https://github.com/bitflipping-solutions/experience-api</PackageProjectUrl>
+    <PackageTags>xapi</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageLicenseFile></PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Configurations>Debug;Release;Test;SaaS</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.6.1" />
+    <PackageReference Include="jose-jwt" Version="2.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Azure.KeyVault.Cryptography" Version="3.0.4" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="5.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

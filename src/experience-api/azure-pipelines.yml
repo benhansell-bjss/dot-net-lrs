@@ -1,0 +1,26 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - master
+    - releases/*
+
+# Global variables
+variables:
+  configuration: Release
+
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: restore
+    projects: '**/*.csproj'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: build
+    projects: '**/*.csproj'
+    arguments: '--configuration $(configuration)'
+
+- publish: $(System.DefaultWorkingDirectory)/src/Data/bin/$(configuration)
+  artifact: Data
+- publish: $(System.DefaultWorkingDirectory)/src/Client/bin/$(configuration)
+  artifact: Client

@@ -1,0 +1,86 @@
+{
+	"variables": [],
+	"info": {
+		"name": "XAPi",
+		"_postman_id": "86a25a61-15e3-3314-a711-31628cc19cf1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:5001/xapi/statements",
+			"request": {
+				"url": "https://localhost:5001/xapi/statements",
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Experience-API-Version",
+						"value": "1.0.3",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"9eee658c-ed73-40df-aa70-bde58481ba98\",\r\n    \"actor\": {\r\n        \"objectType\": \"Agent\",\r\n        \"mbox\": \"mailto:test@beta.projecttincan.com\",\r\n        \"name\": \"Test User\"\r\n    },\r\n    \"verb\": {\r\n        \"id\": \"http://adlnet.gov/expapi/verbs/experienced\",\r\n        \"display\": {\r\n            \"en-US\": \"experienced\"\r\n        }\r\n    },\r\n    \"context\": {\r\n        \"registration\": \"e168d6a3-46b2-4233-82e7-66b73a179727\",\r\n        \"contextActivities\": {\r\n            \"grouping\": [\r\n                {\r\n                    \"id\": \"http://id.tincanapi.com/activity/tincan-prototypes\",\r\n                    \"objectType\": \"Activity\"\r\n                }\r\n            ],\r\n            \"category\": [\r\n                {\r\n                    \"id\": \"http://id.tincanapi.com/recipe/tincan-prototypes/launcher/1\",\r\n                    \"definition\": {\r\n                        \"type\": \"http://id.tincanapi.com/activitytype/recipe\"\r\n                    },\r\n                    \"objectType\": \"Activity\"\r\n                },\r\n                {\r\n                    \"id\": \"http://id.tincanapi.com/activity/tincan-prototypes/launcher-template\",\r\n                    \"definition\": {\r\n                        \"name\": {\r\n                            \"en-US\": \"xAPI Launcher Template\"\r\n                        },\r\n                        \"description\": {\r\n                            \"en-US\": \"A launch tool based on the xAPI launch prototypes.\"\r\n                        },\r\n                        \"type\": \"http://id.tincanapi.com/activitytype/source\"\r\n                    },\r\n                    \"objectType\": \"Activity\"\r\n                }\r\n            ]\r\n        }\r\n    },\r\n    \"timestamp\": \"2020-06-04T12:34:47.066Z\",\r\n    \"stored\": \"2020-06-04T12:34:55.087Z\",\r\n    \"authority\": {\r\n        \"account\": {\r\n            \"homePage\": \"http://cloud.scorm.com\",\r\n            \"name\": \"anonymous\"\r\n        },\r\n        \"objectType\": \"Agent\"\r\n    },\r\n    \"version\": \"1.0.0\",\r\n    \"object\": {\r\n        \"id\": \"http://id.tincanapi.com/activity/tincan-prototypes/launcher\",\r\n        \"definition\": {\r\n            \"name\": {\r\n                \"en-US\": \"xAPI Prototypes Launcher\"\r\n            },\r\n            \"description\": {\r\n                \"en-US\": \"A tool for launching the xAPI prototypes. Simulates the role of an LMS in launching experiences.\"\r\n            },\r\n            \"type\": \"http://id.tincanapi.com/activitytype/lms\"\r\n        },\r\n        \"objectType\": \"Activity\"\r\n    }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5001/xapi/statements copy",
+			"request": {
+				"url": "https://localhost:5001/xapi/statements",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Experience-API-Version",
+						"value": "1.0.3",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"9eee658c-ed73-40df-aa70-bde58481ba98\",\r\n    \"actor\": {\r\n        \"objectType\": \"Agent\",\r\n        \"mbox\": \"mailto:test@beta.projecttincan.com\",\r\n        \"name\": \"Test User\"\r\n    },\r\n    \"verb\": {\r\n        \"id\": \"http://adlnet.gov/expapi/verbs/experienced\",\r\n        \"display\": {\r\n            \"en-US\": \"experienced\"\r\n        }\r\n    },\r\n    \"context\": {\r\n        \"registration\": \"e168d6a3-46b2-4233-82e7-66b73a179727\",\r\n        \"contextActivities\": {\r\n            \"grouping\": [\r\n                {\r\n                    \"id\": \"http://id.tincanapi.com/activity/tincan-prototypes\",\r\n                    \"objectType\": \"Activity\"\r\n                }\r\n            ],\r\n            \"category\": [\r\n                {\r\n                    \"id\": \"http://id.tincanapi.com/recipe/tincan-prototypes/launcher/1\",\r\n                    \"definition\": {\r\n                        \"type\": \"http://id.tincanapi.com/activitytype/recipe\"\r\n                    },\r\n                    \"objectType\": \"Activity\"\r\n                },\r\n                {\r\n                    \"id\": \"http://id.tincanapi.com/activity/tincan-prototypes/launcher-template\",\r\n                    \"definition\": {\r\n                        \"name\": {\r\n                            \"en-US\": \"xAPI Launcher Template\"\r\n                        },\r\n                        \"description\": {\r\n                            \"en-US\": \"A launch tool based on the xAPI launch prototypes.\"\r\n                        },\r\n                        \"type\": \"http://id.tincanapi.com/activitytype/source\"\r\n                    },\r\n                    \"objectType\": \"Activity\"\r\n                }\r\n            ]\r\n        }\r\n    },\r\n    \"timestamp\": \"2020-06-04T12:34:47.066Z\",\r\n    \"stored\": \"2020-06-04T12:34:55.087Z\",\r\n    \"authority\": {\r\n        \"account\": {\r\n            \"homePage\": \"http://cloud.scorm.com\",\r\n            \"name\": \"anonymous\"\r\n        },\r\n        \"objectType\": \"Agent\"\r\n    },\r\n    \"version\": \"1.0.0\",\r\n    \"object\": {\r\n        \"id\": \"http://id.tincanapi.com/activity/tincan-prototypes/launcher\",\r\n        \"definition\": {\r\n            \"name\": {\r\n                \"en-US\": \"xAPI Prototypes Launcher\"\r\n            },\r\n            \"description\": {\r\n                \"en-US\": \"A tool for launching the xAPI prototypes. Simulates the role of an LMS in launching experiences.\"\r\n            },\r\n            \"type\": \"http://id.tincanapi.com/activitytype/lms\"\r\n        },\r\n        \"objectType\": \"Activity\"\r\n    }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5001/xapi/statements copy",
+			"request": {
+				"url": "https://localhost:5001/xapi/activities/9eee658c-ed73-40df-aa70-bde58481ba98",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Experience-API-Version",
+						"value": "1.0.3",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"9eee658c-ed73-40df-aa70-bde58481ba98\",\r\n    \"actor\": {\r\n        \"objectType\": \"Agent\",\r\n        \"mbox\": \"mailto:test@beta.projecttincan.com\",\r\n        \"name\": \"Test User\"\r\n    },\r\n    \"verb\": {\r\n        \"id\": \"http://adlnet.gov/expapi/verbs/experienced\",\r\n        \"display\": {\r\n            \"en-US\": \"experienced\"\r\n        }\r\n    },\r\n    \"context\": {\r\n        \"registration\": \"e168d6a3-46b2-4233-82e7-66b73a179727\",\r\n        \"contextActivities\": {\r\n            \"grouping\": [\r\n                {\r\n                    \"id\": \"http://id.tincanapi.com/activity/tincan-prototypes\",\r\n                    \"objectType\": \"Activity\"\r\n                }\r\n            ],\r\n            \"category\": [\r\n                {\r\n                    \"id\": \"http://id.tincanapi.com/recipe/tincan-prototypes/launcher/1\",\r\n                    \"definition\": {\r\n                        \"type\": \"http://id.tincanapi.com/activitytype/recipe\"\r\n                    },\r\n                    \"objectType\": \"Activity\"\r\n                },\r\n                {\r\n                    \"id\": \"http://id.tincanapi.com/activity/tincan-prototypes/launcher-template\",\r\n                    \"definition\": {\r\n                        \"name\": {\r\n                            \"en-US\": \"xAPI Launcher Template\"\r\n                        },\r\n                        \"description\": {\r\n                            \"en-US\": \"A launch tool based on the xAPI launch prototypes.\"\r\n                        },\r\n                        \"type\": \"http://id.tincanapi.com/activitytype/source\"\r\n                    },\r\n                    \"objectType\": \"Activity\"\r\n                }\r\n            ]\r\n        }\r\n    },\r\n    \"timestamp\": \"2020-06-04T12:34:47.066Z\",\r\n    \"stored\": \"2020-06-04T12:34:55.087Z\",\r\n    \"authority\": {\r\n        \"account\": {\r\n            \"homePage\": \"http://cloud.scorm.com\",\r\n            \"name\": \"anonymous\"\r\n        },\r\n        \"objectType\": \"Agent\"\r\n    },\r\n    \"version\": \"1.0.0\",\r\n    \"object\": {\r\n        \"id\": \"http://id.tincanapi.com/activity/tincan-prototypes/launcher\",\r\n        \"definition\": {\r\n            \"name\": {\r\n                \"en-US\": \"xAPI Prototypes Launcher\"\r\n            },\r\n            \"description\": {\r\n                \"en-US\": \"A tool for launching the xAPI prototypes. Simulates the role of an LMS in launching experiences.\"\r\n            },\r\n            \"type\": \"http://id.tincanapi.com/activitytype/lms\"\r\n        },\r\n        \"objectType\": \"Activity\"\r\n    }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

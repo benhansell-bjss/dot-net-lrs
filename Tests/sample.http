@@ -1,0 +1,20 @@
+POST /xapi/statements HTTP/1.1
+X-Experience-API-Version: 1.0.3
+Authorization: Basic YWRtaW5AZXhhbXBsZS5jb206ektSNGdrWU5IUDV0dkg=
+host: localhost:52209
+accept: application/json
+content-type: application/json
+content-length: 634
+Connection: close
+
+{"actor":{"objectType":"Agent","name":"xAPI account","mbox":"mailto:xapi@adlnet.gov"},"verb":{"id":"http://adlnet.gov/expapi/verbs/attended","display":{"en-GB":"attended","en-US":"attended"}},"context":{"registration":"ec531277-b57b-4c15-8d91-d292c5b2b8f7","platform":"Example virtual meeting software","language":"tlh","statement":{"objectType":"StatementRef","id":"6690e6c9-3ef0-4ed3-8b37-7f3964730bee"},"contextActivities":{"other":[{"objectType":"Activity","id":"http://www.example.com/meetings/occurances/34534"},{"key":"should fail"}]}},"object":{"objectType":"Activity","id":"http://www.example.com/meetings/occurances/34534"}}
+
+### The JWS signature MUST use an algorithm of \"RS256\", \"RS384\", or \"RS512\".
+
+HEAD /xapi/activities?activityId=http://www.example.com/meetings/occurances/34534 HTTP/1.1
+Host: localhost:52209
+User-Agent: node-superagent/1.8.5
+X-Experience-API-Version: 1.0.3
+Authorization: Basic YWRtaW5AZXhhbXBsZS5jb206ektSNGdrWU5IUDV0dkg=
+Connection: close
+

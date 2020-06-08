@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Doctrina.ExperienceApi.Client</RootNamespace>
+    <AssemblyName>Doctrina.ExperienceApi.Client</AssemblyName>
+    <PackageLicenseFile></PackageLicenseFile>
+    <Version>0.0.1-alpha</Version>
+    <Copyright>Copyright (c) 2019 - Present Bitflipping.net</Copyright>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Bitflipping.net</Company>
+    <Authors>bitflipping-net</Authors>
+    <RepositoryUrl>https://github.com/bitflipping-net/experience-api</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>xapi</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <UseNugetPackage>False</UseNugetPackage>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Configurations>Debug;Release;Test;SaaS</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Core" Version="2.2.0" />
+    <PackageReference Include="System.IO.Pipelines" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj" />
+  </ItemGroup>
+
+</Project>
