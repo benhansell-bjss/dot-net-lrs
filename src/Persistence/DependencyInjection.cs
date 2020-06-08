@@ -1,4 +1,5 @@
 ﻿using Doctrina.Application.Common.Interfaces;
+using Doctrina.Persistence.Migrations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,9 +13,7 @@ namespace Doctrina.Persistence
             var connectionString = configuration.GetConnectionString("DoctrinaDatabase");
 
             services.AddDbContext<DoctrinaDbContext>(options => 
-                options.UseNpgsql(connectionString, 
-                x => x.MigrationsAssembly("Persistence"))
-            );
+                options.UseNpgsql(connectionString));
 
             services.AddScoped<IDoctrinaDbContext>(provider => provider.GetService<DoctrinaDbContext>());
 

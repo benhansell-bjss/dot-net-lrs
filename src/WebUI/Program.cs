@@ -37,7 +37,7 @@ namespace Doctrina.WebUI
                 try
                 {
                     var doctrinaContext = services.GetRequiredService<DoctrinaDbContext>();
-                    //doctrinaContext.Database.Migrate();
+                    doctrinaContext.Database.Migrate();
 
                     var identityContext = services.GetRequiredService<DoctrinaAuthorizationDbContext>();
                     //identityContext.Database.Migrate();
