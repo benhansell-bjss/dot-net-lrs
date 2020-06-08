@@ -28,6 +28,6 @@
     },
     "devDependencies": {
         "it": "~0.2.0",
-        "express": "~3.0.5"
+        "express": "~4.17.1"
     }
 }
